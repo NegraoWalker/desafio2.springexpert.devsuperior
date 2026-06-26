@@ -1,0 +1,28 @@
+- Escopo: Implementar as funcionalidades necessárias para que os testes do projeto passem.
+- Critério de avaliação:
+    - DELETE /cities/{id} deve retornar 404 Not Found quando id não existir.
+    - DELETE /cities/{id} deve retornar 204 No Content quando id for independente.
+    - DELETE /cities/{id} deve retornar 400 Bad Request quando id for dependente.
+    - POST /cities deve inserir recurso.
+    - GET /cities deve retornar recursos ordenados por nome.
+    - PUT /events deve atualizar recurso quando id existir.
+    - PUT /events deve retornar 404 Not Found quando id não existir.
+
+- Análise e etapas para resolução:
+    1. Criação do projeto - FEITO
+    2. Adequar o meu projeto ao do professor:
+        2.1 Alterar o application.properties - FEITO
+        2.2 Criar o application-test.properties - FEITO
+        2.3 Importar o seed de dados import.sql - FEITO
+        2.4 Importar os testes CityControllerIT e EventControllerIT - FEITO
+    3. Criação das entidades City e Event
+        3.1 Entender o relacionamento entre as duas entidades - FEITO
+    4. Criação dos dtos CityDTO e EventDTO
+        4.1 Criar um constructor para transformar de entidade para dto - FEITO
+    5. Criação dos repositories CityRepository e EventRepository
+        5.1 Criar um método de ordenação pelo nome no CityRepository - FEITO
+    6. Criação dos services CityService e EventService
+        6.1 Criação das classes de Exceção: ResourceNotFoundException e DatabaseException - FEITO
+        6.2 Criação da classe ControllerExceptionHandler - FEITO
+        6.3 Criação do DTO StandardErrorDTO - FEITO
+    7. Criação dos controllers CityController e EventController - FEITO
